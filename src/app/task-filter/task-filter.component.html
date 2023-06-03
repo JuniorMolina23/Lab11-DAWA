@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="filterSelect">Seleccionar:</label>
+    <select id="filterSelect" class="form-control" [(ngModel)]="seleccion" (change)="onFilterChange()">
+      <option selected value="0">Todas</option>
+      <option value="1">Completadas</option>
+      <option value="2">Pendientes</option>
+    </select>
+  </div>
+  

@@ -1,0 +1,11 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let task of filteredTasks">
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="task.estado"
+                [ngModelOptions]="{standalone: true}">
+            <span [ngClass]="{'text-decoration-line-through': task.estado}">{{ task.nombre }}</span>
+            <span class="badge badge-primary" *ngIf="task.estado">Completada</span>
+            <span class="badge badge-secondary" *ngIf="!task.estado">Pendiente</span>
+        </div>
+    </li>
+</ul>
